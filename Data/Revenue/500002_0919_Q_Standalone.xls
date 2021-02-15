@@ -1,0 +1,31 @@
+<table id="tbl_typeID" class="tablesorter" cellspacing="1" cellpadding="4" style="width:100%;">
+	<tr>
+		<td class="resultgreyhead" style="font-weight:bold;width:400px;">Type</td><td class="resultgreyhead" align="center">Un-Audited </td><td class="resultgreyhead" align="center">Un-Audited </td><td class="resultgreyhead" align="center">Un-Audited </td><td class="resultgreyhead" align="center">Audited</td><td class="resultgreyhead" align="center">Un-Audited </td><td class="resultgreyhead" align="center">Audited</td>
+	</tr><tr>
+		<td class="resultgreyhead" style="font-weight:bold;width:400px;">Period Ending</td><td class="resultgreyhead" align="center">30-Sep-19</td><td class="resultgreyhead" align="center">30-Jun-19</td><td class="resultgreyhead" align="center">31-Mar-19</td><td class="resultgreyhead" align="center">31-Dec-18</td><td class="resultgreyhead" align="center">30-Sep-18</td><td class="resultgreyhead" align="center">31-Dec-18</td>
+	</tr><tr>
+		<td class="resultgreyhead" style="font-weight:bold;width:400px;">No. of Months</td><td class="resultgreyhead" align="center">3</td><td class="resultgreyhead" align="center">3</td><td class="resultgreyhead" align="center">3</td><td class="resultgreyhead" align="center">3</td><td class="resultgreyhead" align="center">3</td><td class="resultgreyhead" align="center">12</td>
+	</tr><tr>
+		<td class="TTHeader" style="font-weight:bold;">Description</td><td class="TTHeader" colspan="6" style="font-weight:bold;">Amount (Rs. million)</td>
+	</tr><tr>
+		<td class="TTRow_left">NS_IEOI</td><td class="TTRow_right">17,456.20</td><td class="TTRow_right">17,257.50</td><td class="TTRow_right">18,502.50</td><td class="TTRow_right">19,663.20</td><td class="TTRow_right">25,153.60</td><td class="TTRow_right">66,901.20</td>
+	</tr><tr>
+		<td class="TTRow_left">Other_Income</td><td class="TTRow_right">164.10</td><td class="TTRow_right">203.70</td><td class="TTRow_right">191.20</td><td class="TTRow_right">159.80</td><td class="TTRow_right">284.90</td><td class="TTRow_right">840.10</td>
+	</tr><tr>
+		<td class="TTRow_left">PBT</td><td class="TTRow_right">1,126.90</td><td class="TTRow_right">1,126.60</td><td class="TTRow_right">1,386.90</td><td class="TTRow_right">2,022.60</td><td class="TTRow_right">1,652.70</td><td class="TTRow_right">3,951.40</td>
+	</tr><tr>
+		<td class="TTRow_left">TAX</td><td class="TTRow_right">-338.80</td><td class="TTRow_right">-429.20</td><td class="TTRow_right">-496.70</td><td class="TTRow_right">-736.20</td><td class="TTRow_right">-569.30</td><td class="TTRow_right">-1,409.50</td>
+	</tr><tr>
+		<td class="TTRow_left">Net_Profit</td><td class="TTRow_right">1,352.80</td><td class="TTRow_right">1,304.00</td><td class="TTRow_right">1,161.90</td><td class="TTRow_right">1,979.10</td><td class="TTRow_right">1,083.40</td><td class="TTRow_right">5,108.90</td>
+	</tr><tr>
+		<td class="TTRow_left">Equity_Cap</td><td class="TTRow_right">423.80</td><td class="TTRow_right">423.80</td><td class="TTRow_right">423.80</td><td class="TTRow_right">423.80</td><td class="TTRow_right">423.80</td><td class="TTRow_right">423.80</td>
+	</tr><tr>
+		<td class="TTRow_left">Basic EPS after Extraordinary items</td><td class="TTRow_right">-</td><td class="TTRow_right">-</td><td class="TTRow_right">-</td><td class="TTRow_right">-</td><td class="TTRow_right">-</td><td class="TTRow_right">-</td>
+	</tr><tr>
+		<td class="TTRow_left">Diluted EPS after Extraordinary items</td><td class="TTRow_right">-</td><td class="TTRow_right">-</td><td class="TTRow_right">-</td><td class="TTRow_right">-</td><td class="TTRow_right">-</td><td class="TTRow_right">-</td>
+	</tr><tr>
+		<td class="TTRow_left">Net Profit Margin</td><td class="TTRow_right">7.75</td><td class="TTRow_right">7.56</td><td class="TTRow_right">6.28</td><td class="TTRow_right">10.06</td><td class="TTRow_right">4.31</td><td class="TTRow_right">7.64</td>
+	</tr><tr>
+		<td class="TTRow_left">Notes</td><td class="TTRow_right" align="center" style="color:#ffffff;"><a onclick="javascript:window.open(&#39;resultNotes.aspx?Scrip_cd=500002&amp;scripName=ABB India Limited&amp;qtrcode=103.00&#39;,&#39;page2&#39;,&#39;width=530, height=400, top=50, left=100, menubar=no , scrollbars=yes, resizable=yes&#39;);return false;" class="tablebluelink">Notes</a></td><td class="TTRow_right" align="center" style="color:#ffffff;"><a onclick="javascript:window.open(&#39;resultNotes.aspx?Scrip_cd=500002&amp;scripName=ABB India Limited&amp;qtrcode=102.00&#39;,&#39;page2&#39;,&#39;width=530, height=400, top=50, left=100, menubar=no , scrollbars=yes, resizable=yes&#39;);return false;" class="tablebluelink">Notes</a></td><td class="TTRow_right" align="center" style="color:#ffffff;"><a onclick="javascript:window.open(&#39;resultNotes.aspx?Scrip_cd=500002&amp;scripName=ABB India Limited&amp;qtrcode=101.00&#39;,&#39;page2&#39;,&#39;width=530, height=400, top=50, left=100, menubar=no , scrollbars=yes, resizable=yes&#39;);return false;" class="tablebluelink">Notes</a></td><td class="TTRow_right" align="center" style="color:#ffffff;"><a onclick="javascript:window.open(&#39;resultNotes.aspx?Scrip_cd=500002&amp;scripName=ABB India Limited&amp;qtrcode=100.00&#39;,&#39;page2&#39;,&#39;width=530, height=400, top=50, left=100, menubar=no , scrollbars=yes, resizable=yes&#39;);return false;" class="tablebluelink">Notes</a></td><td class="TTRow_right" align="center" style="color:#ffffff;"><a onclick="javascript:window.open(&#39;resultNotes.aspx?Scrip_cd=500002&amp;scripName=ABB India Limited&amp;qtrcode=99.00&#39;,&#39;page2&#39;,&#39;width=530, height=400, top=50, left=100, menubar=no , scrollbars=yes, resizable=yes&#39;);return false;" class="tablebluelink">Notes</a></td><td class="TTRow_right" align="center" style="color:#ffffff;"><a onclick="javascript:window.open(&#39;resultNotes.aspx?Scrip_cd=500002&amp;scripName=ABB India Limited&amp;qtrcode=100.50&#39;,&#39;page2&#39;,&#39;width=530, height=400, top=50, left=100, menubar=no , scrollbars=yes, resizable=yes&#39;);return false;" class="tablebluelink">Notes</a></td>
+	</tr>
+</table>
