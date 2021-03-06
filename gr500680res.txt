@@ -1,0 +1,84 @@
+For stock :  500680
+#################################################################################################################
+Features Importance using Coefficients
+*****************************************************************************************
+Features obtained from coefficients greater than 0.1 : 
+--------------------------------------
+['Low Price GR', 'WAP GR']
+Linear Model fitted using columns obtained from feature importance using coefficients : 
+Values in Same direction -----> -----> 464
+Values in Opposite direction <----- ----->  416
+Percentage of correct direction :  0.5272727272727272
+*****************************************************************************************
+Features Importance using p-value
+*****************************************************************************************
+Features obtained from p-values less than 0.02 : 
+-------------------------------------------------
+['Low Price GR', 'Close Price GR', 'WAP GR']
+Linear Model fitted using columns obtained from feature importance using p-values : 
+Values in Same direction -----> -----> 445
+Values in Opposite direction <----- ----->  435
+Percentage of correct direction :  0.5056818181818182
+Features obtained from p-values less than 0.05 : 
+-------------------------------------------------
+['Low Price GR', 'Close Price GR', 'WAP GR']
+Linear Model fitted using columns obtained from feature importance using p-values : 
+Values in Same direction -----> -----> 445
+Values in Opposite direction <----- ----->  435
+Percentage of correct direction :  0.5056818181818182
+Features obtained from p-values less than 0.1 : 
+-------------------------------------------------
+['Low Price GR', 'Close Price GR', 'WAP GR', 'No. of Trades GR']
+Linear Model fitted using columns obtained from feature importance using p-values : 
+Values in Same direction -----> -----> 444
+Values in Opposite direction <----- ----->  436
+Percentage of correct direction :  0.5045454545454545
+Features obtained from p-values less than 0.2 : 
+-------------------------------------------------
+['Low Price GR', 'Close Price GR', 'WAP GR', 'No. of Trades GR', 'Beta GR', 'Net Profit GR', 'EPS GR']
+Linear Model fitted using columns obtained from feature importance using p-values : 
+Values in Same direction -----> -----> 435
+Values in Opposite direction <----- ----->  445
+Percentage of correct direction :  0.4943181818181818
+*****************************************************************************************
+Features Importance using Forward Selection Method
+*****************************************************************************************
+Features obtained from Forward Selection : 
+['Low Price GR', 'No. of Trades GR']
+Values in Same direction -----> -----> 475
+Values in Opposite direction <----- ----->  405
+Percentage of correct direction :  0.5397727272727273
+*****************************************************************************************
+Features Importance using Backward Elimination Method
+*****************************************************************************************
+Features obtained from Backward Elimination : 
+['High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'No. of Trades GR']
+Values in Same direction -----> -----> 440
+Values in Opposite direction <----- ----->  440
+Percentage of correct direction :  0.5
+*****************************************************************************************
+Features Importance using f-value
+*****************************************************************************************
+Features obtained from f-values greater than 1 : 
+--------------------------------------
+['Open Price GR', 'High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Deliverable Quantity GR', 'Dividend Value GR']
+Linear Model fitted using columns obtained from feature importance using f-values : 
+Values in Same direction -----> -----> 461
+Values in Opposite direction <----- ----->  419
+Percentage of correct direction :  0.5238636363636363
+Features obtained from f-values greater than 10 : 
+--------------------------------------
+['High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR']
+Linear Model fitted using columns obtained from feature importance using f-values : 
+Values in Same direction -----> -----> 442
+Values in Opposite direction <----- ----->  438
+Percentage of correct direction :  0.5022727272727273
+Features obtained from f-values greater than 100 : 
+--------------------------------------
+[]
+Features obtained from f-values greater than 1000 : 
+--------------------------------------
+[]
+*****************************************************************************************
+Maximum correct direction values are obtained for FI_FS with a percentage of 0.5397727272727273.
+#################################################################################################################

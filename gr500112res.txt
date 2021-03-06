@@ -1,0 +1,92 @@
+For stock :  500112
+#################################################################################################################
+Features Importance using Coefficients
+*****************************************************************************************
+Features obtained from coefficients greater than 0.1 : 
+--------------------------------------
+['Open Price GR', 'High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'No.of Shares GR', 'Total Turnover (Rs.) GR', 'Alpha GR', 'Beta GR']
+Linear Model fitted using columns obtained from feature importance using coefficients : 
+Values in Same direction -----> -----> 449
+Values in Opposite direction <----- ----->  449
+Percentage of correct direction :  0.5
+*****************************************************************************************
+Features Importance using p-value
+*****************************************************************************************
+Features obtained from p-values less than 0.02 : 
+-------------------------------------------------
+['Alpha GR', 'Beta GR']
+Linear Model fitted using columns obtained from feature importance using p-values : 
+Values in Same direction -----> -----> 473
+Values in Opposite direction <----- ----->  425
+Percentage of correct direction :  0.5267260579064588
+Features obtained from p-values less than 0.05 : 
+-------------------------------------------------
+['Open Price GR', 'No. of Trades GR', 'Alpha GR', 'Beta GR']
+Linear Model fitted using columns obtained from feature importance using p-values : 
+Values in Same direction -----> -----> 475
+Values in Opposite direction <----- ----->  423
+Percentage of correct direction :  0.5289532293986637
+Features obtained from p-values less than 0.1 : 
+-------------------------------------------------
+['Open Price GR', 'No.of Shares GR', 'No. of Trades GR', 'Deliverable Quantity GR', '% Deli. Qty to Traded Qty GR', 'Alpha GR', 'Beta GR']
+Linear Model fitted using columns obtained from feature importance using p-values : 
+Values in Same direction -----> -----> 458
+Values in Opposite direction <----- ----->  440
+Percentage of correct direction :  0.5100222717149221
+Features obtained from p-values less than 0.2 : 
+-------------------------------------------------
+['Open Price GR', 'High Price GR', 'Close Price GR', 'No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Deliverable Quantity GR', '% Deli. Qty to Traded Qty GR', 'Alpha GR', 'Beta GR']
+Linear Model fitted using columns obtained from feature importance using p-values : 
+Values in Same direction -----> -----> 464
+Values in Opposite direction <----- ----->  434
+Percentage of correct direction :  0.5167037861915368
+*****************************************************************************************
+Features Importance using Forward Selection Method
+*****************************************************************************************
+Features obtained from Forward Selection : 
+['Beta GR', 'Close Price GR', 'Spread High-Low GR', 'Low Price GR', 'High Price GR', 'Alpha GR', 'No.of Shares GR', 'Total Turnover (Rs.) GR', 'No. of Trades GR', 'WAP GR', 'Open Price GR']
+Values in Same direction -----> -----> 444
+Values in Opposite direction <----- ----->  454
+Percentage of correct direction :  0.49443207126948774
+*****************************************************************************************
+Features Importance using Backward Elimination Method
+*****************************************************************************************
+Features obtained from Backward Elimination : 
+['Open Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Spread High-Low GR', 'Alpha GR', 'Beta GR']
+Values in Same direction -----> -----> 437
+Values in Opposite direction <----- ----->  461
+Percentage of correct direction :  0.4866369710467706
+*****************************************************************************************
+Features Importance using f-value
+*****************************************************************************************
+Features obtained from f-values greater than 1 : 
+--------------------------------------
+['Open Price GR', 'High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'Spread High-Low GR', 'Alpha GR', 'Beta GR', 'Revenue GR', 'Dividend Value GR', 'Income GR']
+Linear Model fitted using columns obtained from feature importance using f-values : 
+Values in Same direction -----> -----> 445
+Values in Opposite direction <----- ----->  453
+Percentage of correct direction :  0.4955456570155902
+Features obtained from f-values greater than 10 : 
+--------------------------------------
+['Open Price GR', 'High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'Spread High-Low GR', 'Alpha GR', 'Beta GR']
+Linear Model fitted using columns obtained from feature importance using f-values : 
+Values in Same direction -----> -----> 454
+Values in Opposite direction <----- ----->  444
+Percentage of correct direction :  0.5055679287305123
+Features obtained from f-values greater than 100 : 
+--------------------------------------
+['Open Price GR', 'High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'Beta GR']
+Linear Model fitted using columns obtained from feature importance using f-values : 
+Values in Same direction -----> -----> 450
+Values in Opposite direction <----- ----->  448
+Percentage of correct direction :  0.5011135857461024
+Features obtained from f-values greater than 1000 : 
+--------------------------------------
+['Beta GR']
+Linear Model fitted using columns obtained from feature importance using f-values : 
+Values in Same direction -----> -----> 443
+Values in Opposite direction <----- ----->  455
+Percentage of correct direction :  0.4933184855233853
+*****************************************************************************************
+Maximum correct direction values are obtained for LinearFIP0.05 with a percentage of 0.5289532293986637.
+#################################################################################################################

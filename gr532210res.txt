@@ -1,0 +1,72 @@
+For stock :  532210
+#################################################################################################################
+Features Importance using Coefficients
+*****************************************************************************************
+Features obtained from coefficients greater than 0.1 : 
+--------------------------------------
+[]
+*****************************************************************************************
+Features Importance using p-value
+*****************************************************************************************
+Features obtained from p-values less than 0.02 : 
+-------------------------------------------------
+[]
+Features obtained from p-values less than 0.05 : 
+-------------------------------------------------
+['Open Price GR']
+Linear Model fitted using columns obtained from feature importance using p-values : 
+Values in Same direction -----> -----> 402
+Values in Opposite direction <----- ----->  466
+Percentage of correct direction :  0.4631336405529954
+Features obtained from p-values less than 0.1 : 
+-------------------------------------------------
+['Open Price GR', 'High Price GR', 'No. of Trades GR']
+Linear Model fitted using columns obtained from feature importance using p-values : 
+Values in Same direction -----> -----> 421
+Values in Opposite direction <----- ----->  447
+Percentage of correct direction :  0.48502304147465436
+Features obtained from p-values less than 0.2 : 
+-------------------------------------------------
+['Open Price GR', 'High Price GR', 'No. of Trades GR', 'Alpha GR']
+Linear Model fitted using columns obtained from feature importance using p-values : 
+Values in Same direction -----> -----> 420
+Values in Opposite direction <----- ----->  448
+Percentage of correct direction :  0.4838709677419355
+*****************************************************************************************
+Features Importance using Forward Selection Method
+*****************************************************************************************
+Features obtained from Forward Selection : 
+['No. of Trades GR', 'Open Price GR']
+Values in Same direction -----> -----> 425
+Values in Opposite direction <----- ----->  443
+Percentage of correct direction :  0.48963133640552997
+*****************************************************************************************
+Features Importance using Backward Elimination Method
+*****************************************************************************************
+Features obtained from Backward Elimination : 
+['Open Price GR', 'No. of Trades GR']
+Values in Same direction -----> -----> 425
+Values in Opposite direction <----- ----->  443
+Percentage of correct direction :  0.48963133640552997
+*****************************************************************************************
+Features Importance using f-value
+*****************************************************************************************
+Features obtained from f-values greater than 1 : 
+--------------------------------------
+['Open Price GR', 'High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'No. of Trades GR', 'Beta GR', 'Income GR', 'Expenditure GR', 'Net Profit GR', 'EPS GR']
+Linear Model fitted using columns obtained from feature importance using f-values : 
+Values in Same direction -----> -----> 420
+Values in Opposite direction <----- ----->  448
+Percentage of correct direction :  0.4838709677419355
+Features obtained from f-values greater than 10 : 
+--------------------------------------
+[]
+Features obtained from f-values greater than 100 : 
+--------------------------------------
+[]
+Features obtained from f-values greater than 1000 : 
+--------------------------------------
+[]
+*****************************************************************************************
+Maximum correct direction values are obtained for FI_BE with a percentage of 0.48963133640552997.
+#################################################################################################################

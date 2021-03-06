@@ -1,0 +1,88 @@
+For stock :  500209
+#################################################################################################################
+Features Importance using Coefficients
+*****************************************************************************************
+Features obtained from coefficients greater than 0.1 : 
+--------------------------------------
+['High Price GR', 'WAP GR', 'Alpha GR', 'Beta GR']
+Linear Model fitted using columns obtained from feature importance using coefficients : 
+Values in Same direction -----> -----> 455
+Values in Opposite direction <----- ----->  444
+Percentage of correct direction :  0.5061179087875417
+*****************************************************************************************
+Features Importance using p-value
+*****************************************************************************************
+Features obtained from p-values less than 0.02 : 
+-------------------------------------------------
+['No.of Shares GR', 'Total Turnover (Rs.) GR', 'Alpha GR', 'Beta GR']
+Linear Model fitted using columns obtained from feature importance using p-values : 
+Values in Same direction -----> -----> 420
+Values in Opposite direction <----- ----->  479
+Percentage of correct direction :  0.4671857619577308
+Features obtained from p-values less than 0.05 : 
+-------------------------------------------------
+['No.of Shares GR', 'Total Turnover (Rs.) GR', 'Alpha GR', 'Beta GR', 'Net Profit GR']
+Linear Model fitted using columns obtained from feature importance using p-values : 
+Values in Same direction -----> -----> 438
+Values in Opposite direction <----- ----->  461
+Percentage of correct direction :  0.4872080088987764
+Features obtained from p-values less than 0.1 : 
+-------------------------------------------------
+['No.of Shares GR', 'Total Turnover (Rs.) GR', 'Alpha GR', 'Beta GR', 'Net Profit GR']
+Linear Model fitted using columns obtained from feature importance using p-values : 
+Values in Same direction -----> -----> 438
+Values in Opposite direction <----- ----->  461
+Percentage of correct direction :  0.4872080088987764
+Features obtained from p-values less than 0.2 : 
+-------------------------------------------------
+['No.of Shares GR', 'Total Turnover (Rs.) GR', 'Alpha GR', 'Beta GR', 'Net Profit GR']
+Linear Model fitted using columns obtained from feature importance using p-values : 
+Values in Same direction -----> -----> 438
+Values in Opposite direction <----- ----->  461
+Percentage of correct direction :  0.4872080088987764
+*****************************************************************************************
+Features Importance using Forward Selection Method
+*****************************************************************************************
+Features obtained from Forward Selection : 
+['Beta GR', 'Alpha GR', 'WAP GR', 'No. of Trades GR', 'Spread High-Low GR', 'Net Profit GR']
+Values in Same direction -----> -----> 448
+Values in Opposite direction <----- ----->  451
+Percentage of correct direction :  0.4983314794215795
+*****************************************************************************************
+Features Importance using Backward Elimination Method
+*****************************************************************************************
+Features obtained from Backward Elimination : 
+['High Price GR', 'WAP GR', 'No.of Shares GR', 'Total Turnover (Rs.) GR', 'Alpha GR', 'Beta GR', 'Net Profit GR']
+Values in Same direction -----> -----> 444
+Values in Opposite direction <----- ----->  455
+Percentage of correct direction :  0.4938820912124583
+*****************************************************************************************
+Features Importance using f-value
+*****************************************************************************************
+Features obtained from f-values greater than 1 : 
+--------------------------------------
+['Open Price GR', 'High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'No. of Trades GR', 'Spread High-Low GR', 'Alpha GR', 'Beta GR', 'Net Profit GR', 'EPS GR']
+Linear Model fitted using columns obtained from feature importance using f-values : 
+Values in Same direction -----> -----> 453
+Values in Opposite direction <----- ----->  446
+Percentage of correct direction :  0.5038932146829811
+Features obtained from f-values greater than 10 : 
+--------------------------------------
+['Open Price GR', 'High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'Alpha GR', 'Beta GR']
+Linear Model fitted using columns obtained from feature importance using f-values : 
+Values in Same direction -----> -----> 444
+Values in Opposite direction <----- ----->  455
+Percentage of correct direction :  0.4938820912124583
+Features obtained from f-values greater than 100 : 
+--------------------------------------
+['Open Price GR', 'High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'Alpha GR', 'Beta GR']
+Linear Model fitted using columns obtained from feature importance using f-values : 
+Values in Same direction -----> -----> 444
+Values in Opposite direction <----- ----->  455
+Percentage of correct direction :  0.4938820912124583
+Features obtained from f-values greater than 1000 : 
+--------------------------------------
+[]
+*****************************************************************************************
+Maximum correct direction values are obtained for LinearFIC0.1 with a percentage of 0.5061179087875417.
+#################################################################################################################
