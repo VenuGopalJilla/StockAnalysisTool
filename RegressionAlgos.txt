@@ -1,0 +1,6 @@
+Linear
+SVR
+GRNN
+KNN
+RNN - Regression
+BPNN
