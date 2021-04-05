@@ -1,0 +1,103 @@
+.border-left-primary {
+    border-left: 0.50rem solid #4e73df;
+}
+
+.align-items-center {
+    margin-right: 0;
+    margin-left: 0;
+    align-items: center ;
+}
+
+.companyName {
+    font-size: 2.5rem;
+    font-weight: 700 ;
+    text-transform: uppercase ;
+    color: #4e73df;
+}
+
+/* .h5 mb-0 font-weight-bold text-gray-800 */
+.companyDetails {
+    color: #5a5c69 ;
+    font-weight: bold;
+}
+
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col,
+.col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm,
+.col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md,
+.col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg,
+.col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl,
+.col-xl-auto {
+  position: relative;
+  width: 100%;
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+}
+
+/* Open/High Price card */
+.service-item .down-content {
+	background-color: #f7f7f7;
+	padding: 10px;
+}
+
+
+/* Suggestion type 1 */
+.Services_sec{ padding: 10px ; width: 100%; overflow: hidden; background: #ececec top center no-repeat;  }
+.Services_sec .Center {  margin: auto; overflow: hidden; text-align: center; }
+.Services_sec h2 { font-size: 30px; color: #000; font-weight: 400; margin: 5px; text-transform: uppercase;  }
+.Services_sec .Line { border: solid 1px #ff9408; height: 2px; width: 252px; margin: auto; }
+
+.Services_sec .Serviceside { padding: 30px 0px 30px 0px; width: 100%; overflow: hidden; }
+.Services_sec .Serviceside ul { list-style: none; margin: 0px }
+.Services_sec .Serviceside li { float: left; padding: 0px; margin: 0px 30px 0px 0px; text-align: center; width: 220px; }
+
+.Services_sec .Serviceside li.Development { padding: 30px 0px 30px 0px; background: #fff;box-shadow: 1px 4px 7px -4px rgba(0,0,0,0.75); }	.Services_sec .Serviceside li.Development a { text-decoration: none; background:  top center no-repeat; display: block; }
+/* .Services_sec .Serviceside li.Development h4 { padding: 50px 0px 0px 0px;  font-size: 17px; color: #03a4df; text-decoration: none; text-transform: uppercase;  } */
+/* .Services_sec .Serviceside li.Development a:hover h4 { color: #fff; background: top center no-repeat; } */
+
+
+
+/* Suggestion type 2 */
+.Pricing_sec { width: 100%; overflow: hidden; background: #ececec; }
+.Pricing_sec .Center {  margin: auto; overflow: hidden; text-align: center; }
+.Pricing_sec h2 { font-size: 30px; color: #000; font-family: 'Oswald', sans-serif; font-weight: 300; margin: 0px; line-height: 60px; }
+
+.Pricing_sec .Line { border: solid 1px darkgray; height: 2px; width: 252px; margin: auto; }
+
+.Pricing_sec .Pricingside ul { list-style: none; margin: 20px; }
+.Pricing_sec .Pricingside li { float: none; height: 50px; text-align: center; }
+.Pricing_sec .Pricingside li .Dollar { text-align: center; width: 150px; height: 50px; float: left; background: #2d2d2d; }
+.Pricing_sec .Pricingside li .Dollar h2 { font-size: 30px; color: burlywood; font-weight: 200;}
+
+.Pricing_sec .Pricingside li .Band { padding: 5px 30px; width: 150px; float: left; background: #fff ; transition: all 0.3s ease; }
+.Pricing_sec .Pricingside li .Band p { font-size: 16px; color: #979797; margin: 0px;  font-weight: 400; line-height: 20px; }
+.Pricing_sec .Pricingside li .Band p span { display: block; }
+
+.Pricing_sec .Pricingside li .Order {width: 150px; float: left; display: table; height: 50px;  }
+.Pricing_sec .Pricingside li .Order a { font-size: 16px; color: #fff; font-weight: 200; text-decoration: none;  display: table-cell; vertical-align: middle;  background: #2d2d2d; }
+
+
+
+
+/* chart */
+.column1 {
+    width: 30%;
+}
+
+.column2 {
+    width: auto;
+}
+/* .chartHeading {
+    color: rgb(52, 58, 64);
+    padding-left: 3em;
+    padding-top: 1em;
+    
+}
+.chartButtons {
+    padding-left: 1em;
+    padding-top: 2em;
+} */
+
+.chartFromDate {
+    padding-left: 5em;
+    padding-top: 2em;
+}

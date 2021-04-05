@@ -1,0 +1,28 @@
+
+.sideMenu{
+    position: fixed;
+    top: 65px;
+    bottom: 0px;
+    left:0px;
+    margin:auto;
+    width:210px;
+    background-color: rgb(52, 58, 64);
+    transition: all ease 0.5s;
+    /* transform: translateX(-100%); to hide side menu bar */
+    z-index: 2000;
+}
+
+.content{
+    width: 100%;
+    margin-left: 0px;
+    transition: all ease 0.5s;
+}
+
+@media (min-width: 992px){
+    .sideMenu{
+        transform: translateX(0);
+    }
+    .content{
+        margin-left: 220px;
+    }
+}
