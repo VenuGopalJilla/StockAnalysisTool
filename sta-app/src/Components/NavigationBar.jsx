@@ -46,36 +46,36 @@ class NavigationBar extends React.Component {
         <Grid item xs={2}>
           <Typography
             className={classes.grid}
-            variant="h4"
-            style={{ color: "#000000" }}
+            variant="h5"
+            style={{ color: "green" }}
           >
             Stock Trends
           </Typography>
         </Grid>
         <Grid item>
           <NavLink to="/" className={classes.link}>
-            <Typography className={classes.grid} variant="h4">
+            <Typography className={classes.grid} variant="h5">
               Home
             </Typography>
           </NavLink>
         </Grid>
         <Grid item>
           <NavLink to="/about" className={classes.link}>
-            <Typography className={classes.grid} variant="h4">
+            <Typography className={classes.grid} variant="h5">
               About
             </Typography>
           </NavLink>
         </Grid>
         <Grid item>
           <NavLink to="/performance" className={classes.link}>
-            <Typography className={classes.grid} variant="h4">
+            <Typography className={classes.grid} variant="h5">
               Performance
             </Typography>
           </NavLink>
         </Grid>
         <Grid item>
           <NavLink to="/login" className={classes.link}>
-            <Typography className={classes.grid} variant="h4">
+            <Typography className={classes.grid} variant="h5">
               Login
             </Typography>
           </NavLink>

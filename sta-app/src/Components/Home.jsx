@@ -44,6 +44,7 @@ const styles = (theme) => ({
   content: {
     flexGrow: 1,
     backgroundColor: theme.palette.background.default,
+    // padding: theme.spacing(3),
     padding: theme.spacing(3),
   },
 });
@@ -107,7 +108,8 @@ class Home extends React.Component {
             <Toolbar>
               {this.state.companyNames.length !== 0 && (
                 <NavigationBar
-                  styles ={{margin :"10px"}}
+                  // styles ={{margin :"10px"}}
+                  styles ={{margin :"5px"}}
                   searchforcompanies={this.state.companyNames}
                   onSelectCompany={this.getSelectedCompany}
                 />

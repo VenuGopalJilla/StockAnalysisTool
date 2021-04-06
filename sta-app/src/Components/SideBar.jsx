@@ -20,7 +20,7 @@ const styles = (theme) => ({
     width: "100%",
   },
   heading: {
-    fontSize: theme.typography.pxToRem(15),
+    fontSize: theme.typography.pxToRem(10),
     fontWeight: theme.typography.fontWeightRegular,
   },
   link: {
@@ -53,7 +53,7 @@ class SideBar extends React.Component {
         <Paper className={classes.paper} elevation={0}>
           <Accordion style={{ border: "none" }}>
             <AccordionSummary aria-controls="panel1a-content" id="top10">
-              <Typography variant="h4">TOP 10</Typography>
+              <Typography variant="h5">TOP 10</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <NavLink
@@ -80,7 +80,7 @@ class SideBar extends React.Component {
         <Paper className={classes.paper} elevation={0}>
           <Accordion>
             <AccordionSummary aria-controls="panel1a-content">
-              <Typography variant="h4">TOP 30</Typography>
+              <Typography variant="h5">TOP 30</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <NavLink
@@ -107,21 +107,21 @@ class SideBar extends React.Component {
         <Paper className={classes.paper} elevation={0}>
           <NavLink to={{ pathname: "/sectors" }} className={classes.link}>
             <Paper className={classes.paper} elevation={0}>
-              <Typography variant="h4">Sectors</Typography>
+              <Typography variant="h5">SECTORS</Typography>
             </Paper>
           </NavLink>
         </Paper>
         <Paper className={classes.paper} elevation={0}>
           <NavLink to={{ pathname: "/sp500" }} className={classes.link}>
             <Paper className={classes.paper} elevation={0}>
-              <Typography variant="h4">S AND P 500</Typography>
+              <Typography variant="h5">S AND P 500</Typography>
             </Paper>
           </NavLink>
         </Paper>
         <Paper className={classes.paper} elevation={0}>
           <NavLink to={{ pathname: "/revenue" }} className={classes.link}>
             <Paper className={classes.paper} elevation={0}>
-              <Typography variant="h4">TOP REVENUE</Typography>
+              <Typography variant="h5">TOP REVENUE</Typography>
             </Paper>
           </NavLink>
         </Paper>

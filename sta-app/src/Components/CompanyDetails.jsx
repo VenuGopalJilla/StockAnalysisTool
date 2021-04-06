@@ -73,7 +73,8 @@ class CompanyDetails extends React.Component {
   };
 
   getCompanyCurrentDayStockDetailsFromFirebase = (company) => {
-    let yesterday = moment().startOf("day").unix().toString();
+    // let yesterday = moment().startOf("day").unix().toString();
+    let yesterday = "1614277800";
     const dbref = firebase.database().ref().child("stocks").child(company);
     dbref.child(yesterday).on(
       "value",
