@@ -209,7 +209,6 @@ class CompanyDetails extends React.Component {
           </Paper>
         )}
         <Grid container> {companyDetails}</Grid>
-        <br/>
         <Paper
             elevation={3}
             style={{

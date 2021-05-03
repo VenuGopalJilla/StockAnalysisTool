@@ -22,6 +22,7 @@ import Dashboard from "./Dashboard";
 import CompanyDetails from "./CompanyDetails";
 import Revenue from "./Revenue";
 import PageNotFound from "./PageNotFound";
+
 const drawerWidth = 250;
 
 const styles = (theme) => ({
