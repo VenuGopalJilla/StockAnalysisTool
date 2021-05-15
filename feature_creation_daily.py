@@ -977,6 +977,7 @@ def create_new_LB_UB(stock, full_stock):
 
 
 path = os.path.join(os.getcwd(), "Data")
+print("path :", path)
 
 
 def push_to_git():
