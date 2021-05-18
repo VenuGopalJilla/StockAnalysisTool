@@ -206,17 +206,19 @@ class Simulation extends React.Component {
                 <TableHead>
                   <TableRow>
                     <TableCell variant = "h5"> Company</TableCell>
+                    <TableCell align="right" variant = "h5">Security Id</TableCell>
                     <TableCell align="right" variant = "h5">Average Returns Percentage</TableCell>
                     <TableCell align="right" variant = "h5">Simulation Results</TableCell>
                   </TableRow>
                 </TableHead>
                 <TableBody>
                   {this.state.simulationtop.map((row) => (
-                    <TableRow key={row.company}>
+                    <TableRow key={row.Company}>
                       <TableCell component="th" scope="row">
-                        {row.company}
+                        {row.Company}
                       </TableCell>
-                      <TableCell align="right">{row.average_return_percent}</TableCell>
+                      <TableCell align="right">{row["Security Id"]}</TableCell>
+                      <TableCell align="right">{row["Average Returns %"]}</TableCell>
                       <TableCell align="right">
                       <DownloadLink
                         label = "Results"
