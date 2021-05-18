@@ -2,7 +2,5 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/api/companyNames": "pages/api/companyNames.js",
-  "/": "pages/index.js",
-  "/api/simulationtop": "pages/api/simulationtop.js"
+  "/": "pages/index.js"
 }

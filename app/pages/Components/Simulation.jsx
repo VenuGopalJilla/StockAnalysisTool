@@ -127,6 +127,7 @@ class Simulation extends React.Component {
     axios
       .get("/api/simulationtop" + "?" + "days=" + days)
       .then((s) => {
+        console.log(s.data);
         if (s.status === 200) {
           this.setState({ simulationtop: s.data }, () => {});
         }
@@ -215,10 +216,10 @@ class Simulation extends React.Component {
                   {this.state.simulationtop.map((row) => (
                     <TableRow key={row.Company}>
                       <TableCell component="th" scope="row">
-                        {row.Company}
+                        {row.company}
                       </TableCell>
-                      <TableCell align="right">{row["Security Id"]}</TableCell>
-                      <TableCell align="right">{row["Average Returns %"]}</TableCell>
+                      <TableCell align="right">{row.security_id}</TableCell>
+                      <TableCell align="right">{row.average_return_percent}</TableCell>
                       <TableCell align="right">
                       <DownloadLink
                         label = "Results"

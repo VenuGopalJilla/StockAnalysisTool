@@ -22,7 +22,8 @@ export default async (req, res, next) => {
             const data = rows[i].split(",");
             response.push({
               company: data[0],
-              average_return_percent: data[1],
+              security_id: data[1],
+              average_return_percent: data[2],
             });
           }
           res.send(response);
