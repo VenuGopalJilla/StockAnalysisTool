@@ -4,10 +4,10 @@ export default async (req, res, next) => {
     console.log("simulationtop");
     // const topurl =
     //   "https://raw.githubusercontent.com/saikr789/stock-analysis-tool-1011/master/Data/Simulation/top_seldays.csv";
-    const topurl =
-      "https://raw.githubusercontent.com/saikr789/stock-index-risk/master/Data/Simulation/top_seldays.csv";
     // const topurl =
-      // "C:\\Users\\venu\\Desktop\\Stock Market Analysis\\Data\\SP500_simulation_results\\top_seldays_Results.csv";
+      // "https://raw.githubusercontent.com/saikr789/stock-index-risk/master/Data/Simulation/top_seldays.csv";
+    const topurl =
+      "https://raw.githubusercontent.com/VenuGopalJilla/StockAnalysisTool/main/Data/SP500_simulation_results/top_seldaysdays_Results.csv";
     const days = req.query["days"];
     console.log(days);
     axios
