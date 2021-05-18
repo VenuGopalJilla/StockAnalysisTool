@@ -18,8 +18,11 @@ export default async (req, res, next) => {
           let response = [];
           let rows = s.data.split("\n");
           const header = rows[0].split(",");
-          for (let i = 1; i < rows.length; i++) {
+          for (let i = 1; i < rows.length; i++) { 
             const data = rows[i].split(",");
+            if (data.length < 3) {
+              continue;
+            }
             response.push({
               company: data[0],
               security_id: data[1],

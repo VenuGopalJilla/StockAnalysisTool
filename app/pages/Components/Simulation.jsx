@@ -208,12 +208,14 @@ class Simulation extends React.Component {
                   <TableRow>
                     <TableCell variant = "h5"> Company</TableCell>
                     <TableCell align="right" variant = "h5">Security Id</TableCell>
-                    <TableCell align="right" variant = "h5">Average Returns Percentage</TableCell>
+                    <TableCell align="right" variant = "h5">Average Returns</TableCell>
                     <TableCell align="right" variant = "h5">Simulation Results</TableCell>
                   </TableRow>
                 </TableHead>
                 <TableBody>
-                  {this.state.simulationtop.map((row) => (
+                  {this.state.simulationtop.map((row) => {
+                    console.log(row);
+                    return (
                     <TableRow key={row.Company}>
                       <TableCell component="th" scope="row">
                         {row.company}
@@ -223,13 +225,13 @@ class Simulation extends React.Component {
                       <TableCell align="right">
                       <DownloadLink
                         label = "Results"
-                        filename = "details.csv"
+                        filename = {row["security_id"] + ".csv"}
                         tagName = "button"
-                        exportFile = {() => Promise.resolve(this. getDataFromURL("https://raw.githubusercontent.com/saikr789/stock-index-risk/master/Data/Simulation/500002.csv"))}
-                        />
+                        exportFile = {() =>  Promise.resolve(this. getDataFromURL("https://raw.githubusercontent.com/VenuGopalJilla/StockAnalysisTool/main/Data/SP500_simulation_results/" + row["security_id"] + "_" + this.state.seldays + "days.csv"))}
+                          />
                       </TableCell>
                     </TableRow>
-                  ))}
+                  )})}
                 </TableBody>
               </Table>
             </TableContainer>
