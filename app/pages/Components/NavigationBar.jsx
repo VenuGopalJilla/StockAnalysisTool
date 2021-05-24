@@ -88,7 +88,7 @@ class NavigationBar extends React.Component {
         <Grid item>
           <NavLink to="/comparision" className={classes.link}>
             <Typography className={classes.grid} variant="h4">
-              Comparision
+              Comparison
             </Typography>
           </NavLink>
         </Grid>

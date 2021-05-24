@@ -4,17 +4,16 @@ export default async (req, res, next) => {
     console.log("simulationtop");
     // const topurl =
     //   "https://raw.githubusercontent.com/saikr789/stock-analysis-tool-1011/master/Data/Simulation/top_seldays.csv";
-    // const topurl =
-      // "https://raw.githubusercontent.com/saikr789/stock-index-risk/master/Data/Simulation/top_seldays.csv";
     const topurl =
-      "https://raw.githubusercontent.com/VenuGopalJilla/StockAnalysisTool/main/Data/SP500_simulation_results/top_seldays_Results.csv";
+      "https://raw.githubusercontent.com/saikr789/stock-index-risk/master/Data/SimulationResult/top_seldays.csv";
+    // const topurl =
+      // "https://raw.githubusercontent.com/VenuGopalJilla/StockAnalysisTool/main/Data/SP500_simulation_results/top_seldays_Results.csv";
     const days = req.query["days"];
-    console.log(days);
     axios
-      .get(topurl.replace("sel", days))
+      .get(topurl.replace("seldays", days))
       .then((s) => {
         if (s.status === 200) {
-          console.log(s);
+          
           let response = [];
           let rows = s.data.split("\n");
           const header = rows[0].split(",");

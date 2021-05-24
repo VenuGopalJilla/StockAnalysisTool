@@ -225,9 +225,10 @@ class Simulation extends React.Component {
                       <TableCell align="right">
                       <DownloadLink
                         label = "Results"
-                        filename = {row["security_id"] + ".csv"}
+                        filename = {row["security_id"] + "_" + this.state.seldays + ".csv"}
                         tagName = "button"
-                        exportFile = {() =>  Promise.resolve(this. getDataFromURL("https://raw.githubusercontent.com/VenuGopalJilla/StockAnalysisTool/main/Data/SP500_simulation_results/" + row["security_id"] + "_" + this.state.seldays + "days.csv"))}
+                        // exportFile = {() =>  Promise.resolve(this. getDataFromURL("https://raw.githubusercontent.com/VenuGopalJilla/StockAnalysisTool/main/Data/SP500_simulation_results/" + row["security_id"] + "_" + this.state.seldays + "days.csv"))}
+                        exportFile = {() =>  Promise.resolve(this. getDataFromURL("https://raw.githubusercontent.com/saikr789/stock-index-risk/master/Data/SimulationResult/" + row["security_id"] + "_" + this.state.seldays + ".csv"))}
                           />
                       </TableCell>
                     </TableRow>
