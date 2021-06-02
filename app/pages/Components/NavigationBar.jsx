@@ -6,6 +6,7 @@ import Autocomplete from "@material-ui/lab/Autocomplete";
 import React from "react";
 import { NavLink, withRouter } from "react-router-dom";
 import axios from "axios";
+
 const styles = (theme) => ({
   root: {
     flexGrow: 1,
@@ -15,10 +16,16 @@ const styles = (theme) => ({
     color: theme.palette.text.secondary,
   },
   link: {
-    textDecoration: "none",
+    textDecoration: "initial",
   },
   grid: {
+    // "&:hover": {
+    //   backgroundColor: "#ADD8E0",
+    // },
+  },
+  typography: {
     padding: 20,
+    fontSize : 24,
   },
 });
 
@@ -36,6 +43,7 @@ class NavigationBar extends React.Component {
     }
     this.setState({ selectedCompany: val }, () => {
       history.push("/companydetails/" + this.state.selectedCompany);
+      this.setState({ selectedCompany: "" }, () => {});
     });
   };
 
@@ -56,52 +64,59 @@ class NavigationBar extends React.Component {
   render() {
     const { classes } = this.props;
     return (
-      <Grid container className={classes.root} spacing={2}>
-        <Grid item>
+      <Grid container className={classes.root} spacing={1}>
+        <Grid item className={classes.grid}>
           <NavLink to="/" className={classes.link}>
-            <Typography className={classes.grid} variant="h4">
+            <Typography className={classes.typography} variant="button"
+            >
               Home
             </Typography>
           </NavLink>
         </Grid>
-        <Grid item>
+        <Grid item className={classes.grid}>
           <NavLink to="/about" className={classes.link}>
-            <Typography className={classes.grid} variant="h4">
+            <Typography className={classes.typography} variant="button"
+            >
               About
             </Typography>
           </NavLink>
         </Grid>
-        <Grid item>
-          <NavLink to="/performance" className={classes.link}>
+        {/* <Grid item>
+          <NavLink to="/performance" className={classes.link} variant="button">
             <Typography className={classes.grid} variant="h4">
               Performance
             </Typography>
           </NavLink>
-        </Grid>
-        <Grid item>
+        </Grid> */}
+        {/* <Grid item>
           <NavLink to="/login" className={classes.link}>
             <Typography className={classes.grid} variant="h4">
               Login
             </Typography>
           </NavLink>
-        </Grid>
-        <Grid item>
-          <NavLink to="/comparision" className={classes.link}>
-            <Typography className={classes.grid} variant="h4">
+        </Grid> */}
+        <Grid item className={classes.grid}>
+          <NavLink to="/comparison" className={classes.link}>
+            <Typography className={classes.typography} variant="button"
+            >
               Comparison
             </Typography>
           </NavLink>
         </Grid>
-        <Grid item>
-          <NavLink to="/simulation" className={classes.link}>
-            <Typography className={classes.grid} variant="h4">
+        <Grid item className={classes.grid}>
+          <NavLink to="/simulation" className={classes.link} >
+            <Typography className={classes.typography} variant="button" 
+            >
               Simulation
             </Typography>
           </NavLink>
         </Grid>
-        <Grid item>
+        <Grid item className={classes.grid}>
           <Autocomplete
-            style={{ width: "200px" }}
+            style={{ 
+              width: "300px",
+              color:"#05386B"
+            }}
             value={this.state.selectedCompany}
             onChange={(e, val) => {
               this.selectedCompany(e, val);
@@ -115,6 +130,7 @@ class NavigationBar extends React.Component {
                 label="search for companies"
                 margin="normal"
                 variant="outlined"
+                color="#05386B"
               />
             )}
           />

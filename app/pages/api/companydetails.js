@@ -3,7 +3,7 @@ export default (req, res, next) => {
   try {
     let company = req.query["company"];
     const companydetailsURL =
-      "https://raw.githubusercontent.com/saikr789/stock-analysis-tool-1011/master/Data/companies.json";
+      "https://raw.githubusercontent.com/saikr789/stock-analysis-tool-1011-data/master/Data/companies.json";
 
     axios
       .get(companydetailsURL)

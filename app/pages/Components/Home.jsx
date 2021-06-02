@@ -3,22 +3,23 @@ import Drawer from "@material-ui/core/Drawer";
 import { withStyles } from "@material-ui/core/styles";
 import Toolbar from "@material-ui/core/Toolbar";
 import React from "react";
-import { Typography } from "@material-ui/core";
-import { Route, Switch, withRouter, useHistory } from "react-router-dom";
+import { Route, Switch, withRouter, HashRouter} from "react-router-dom";
 import About from "./About";
+import Typography from "@material-ui/core/Typography";
 
 import CompanyDetails from "./CompanyDetails";
-import Comparision from "./Comparision";
-import Login from "./Login";
+import Comparison from "./Comparison";
+// import Login from "./Login";
 import NavigationBar from "./NavigationBar";
 import PageNotFound from "./PageNotFound";
-import Performance from "./Performance";
+// import Performance from "./Performance";
 import Revenue from "./Revenue";
 import Sectors from "./Sectors";
 import SideBar from "./SideBar";
 import SP500 from "./SP500";
 import Top from "./Top";
 import Simulation from "./Simulation";
+
 const drawerWidth = 300;
 const styles = (theme) => ({
   root: {
@@ -27,6 +28,7 @@ const styles = (theme) => ({
   appBar: {
     width: `calc(100% - ${drawerWidth}px)`,
     marginLeft: drawerWidth,
+    paddingTop: theme.spacing(2),
   },
   drawer: {
     width: drawerWidth,
@@ -39,13 +41,13 @@ const styles = (theme) => ({
   toolbar: {
     display: "flex",
     alignItems: "center",
-    // justifyContent: "flex-end",
     justifyContent: "center",
-    padding: 20,
+    padding: 30,
     ...theme.mixins.toolbar,
   },
   content: {
-    backgroundColor: theme.palette.background.default,
+    // backgroundColor: theme.palette.background.default,
+    backgroundColor : "white",
     flexGrow: 1,
     flexWrap: "wrap",
     padding: theme.spacing(3),
@@ -53,8 +55,10 @@ const styles = (theme) => ({
     width: "auto",
     height: "100%",
     overflowX: "hidden",
+    alignItems: "center"
   },
 });
+
 class Home extends React.Component {
   constructor(props) {
     super(props);
@@ -69,12 +73,14 @@ class Home extends React.Component {
 
   render() {
     const { classes } = this.props;
+    console.log(this.props);
     return (
       <React.Fragment>
+        <HashRouter>
         <AppBar
           position="relative"
           className={classes.appBar}
-          style={{ backgroundColor: "inherit", color: "inherit" }}
+          style={{ backgroundColor: "#5CDB95", color: "#05386B"}}
         >
           <Toolbar>
             <NavigationBar />
@@ -89,17 +95,17 @@ class Home extends React.Component {
             }}
             anchor="left"
           >
-            <div className={classes.toolbar}>
+            {/* <div className={classes.toolbar}>
               <Typography variant="h4">Stock Trends</Typography>
-            </div>
+            </div> */}
             <SideBar />
           </Drawer>
           <main className={classes.content}>
             <Switch>
               <Route exact path="/" />
-              <Route exact path="/login" component={Login} />
+              {/* <Route exact path="/login" component={Login} /> */}
               <Route exact path="/about" component={About} />
-              <Route exact path="/performance" component={Performance} />
+              {/* <Route exact path="/performance" component={Performance} /> */}
               <Route
                 exact
                 path="/top/:num/:type"
@@ -135,12 +141,13 @@ class Home extends React.Component {
                 )}
               />
               <Route exact path="/sp500" component={SP500} />
-              <Route exact path="/comparision" component={Comparision} />
+              <Route exact path="/comparison" component={Comparison} />
               <Route exact path="/simulation" component={Simulation} />
               <Route component={PageNotFound} />
             </Switch>
           </main>
         </div>
+        </HashRouter>
       </React.Fragment>
     );
   }

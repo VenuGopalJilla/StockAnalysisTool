@@ -1,9 +1,18 @@
-import { Paper, Typography } from "@material-ui/core";
+import { Paper, Typography, withStyles  } from "@material-ui/core";
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 import axios from "axios";
 import Loader from "react-loader-spinner";
+import { GRID_HEADER_CELL_SEPARATOR_RESIZABLE_CSS_CLASS } from "@material-ui/data-grid";
+
+const styles = (theme) => ({
+  paper : {
+    "&:hover": {
+      color: "blue",
+    },
+  },
+});
 
 class Revenue extends React.Component {
   constructor(props) {
@@ -46,22 +55,25 @@ class Revenue extends React.Component {
   };
 
   render() {
+    const { classes } = this.props;
     return (
       <React.Fragment>
         {this.state.loading ? (
-          <Loader />
+          <Loader type="ThreeDots" color="#05386B" height={80} width={80}/>
         ) : (
           <div>
             <Paper
-              elevation={1}
+              elevation={0}
               style={{
                 display: "flex",
                 padding: "15px",
                 margin: "15px",
                 justifyContent: "center",
+                backgroundColor: "#05386B",
+                color : "#5CDB95"
               }}
             >
-              <Typography variant="h4" color="primary">
+              <Typography variant="subtitle1">
                 Top {this.state.num} Companies Revenue wise
               </Typography>
             </Paper>
@@ -75,10 +87,11 @@ class Revenue extends React.Component {
                   }}
                 >
                   <Paper
-                    elevation={1}
-                    style={{ display: "flex", padding: "10px", margin: "10px" }}
+                    elevation={0}
+                    style={{ display: "flex", padding: "10px", margin: "10px", justifyContent: "center", }}
+                    className = { classes.paper }
                   >
-                    <Typography variant="h6">{company}</Typography>
+                    <Typography variant="subtitle2" >{company}</Typography>
                   </Paper>
                 </NavLink>
               );
@@ -90,4 +103,5 @@ class Revenue extends React.Component {
   }
 }
 
-export default Revenue;
+// export default Revenue;
+export default withStyles(styles, { withTheme: true })(Revenue);

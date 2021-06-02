@@ -4,7 +4,7 @@ const axios = require("axios");
 export default (req, res, next) => {
   try {
     const sp500URL =
-      "https://raw.githubusercontent.com/saikr789/stock-analysis-tool-1011/master/Data/sp500.csv";
+      "https://raw.githubusercontent.com/saikr789/stock-analysis-tool-1011-data/master/Data/sp500.csv";
     axios
       .get(sp500URL)
       .then((s) => {

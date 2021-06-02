@@ -2,10 +2,32 @@ import React from "react";
 import axios from "axios";
 // import Chart from "react-apexcharts";
 import dynamic from "next/dynamic";
+import { withStyles } from "@material-ui/core/styles";
 const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
 
 import { ButtonGroup, Button, Divider } from "@material-ui/core";
 import Loader from "react-loader-spinner";
+import { classnames } from "@material-ui/data-grid";
+
+
+
+const styles = (theme) => ({
+  chart: {
+    width: "80%",
+  },
+  divchart: {
+    justifyContent: "center",
+    alignItems: "center",
+    display: "flex",
+  },
+  buttongroup: {
+    display: "flex",
+    justifyContent: "center",
+    margin: "10px",
+  },
+});
+
+
 class Dashboard extends React.Component {
   constructor(props) {
     super(props);
@@ -48,10 +70,10 @@ class Dashboard extends React.Component {
           text: "Stock Price Movement",
           align: "left",
           style: {
-            fontSize: "24px",
+            fontSize: "18px",
             fontWeight: "bold",
-            fontFamily: undefined,
-            color: "blue",
+            fontFamily: "Sans-serif",
+            color: "black",
             display: "flex",
             justifyContent: "center",
           },
@@ -163,6 +185,19 @@ class Dashboard extends React.Component {
       name: "Close Price",
       data: [],
     };
+    let openPriceData = {
+      name: "Open Price",
+      data: [],
+    };
+    let highPriceData = {
+      name: "High Price",
+      data: [],
+    };
+    let lowPriceData = {
+      name: "Low Price",
+      data: [],
+    };
+
     days =
       days === "all"
         ? this.state.details.length - 1
@@ -178,12 +213,32 @@ class Dashboard extends React.Component {
         x: element["Date"],
         y: element["Close Price"] || element["Close"],
       });
+
+      openPriceData.data.push({
+        x: element["Date"],
+        y: element["Open Price"] || element["Open"],
+      });
+
+      highPriceData.data.push({
+        x: element["Date"],
+        y: element["High Price"] || element["High"],
+      });
+
+      lowPriceData.data.push({
+        x: element["Date"],
+        y: element["Low Price"] || element["Low"],
+      });
+
+
     }
     let options = this.state.options;
     options.xaxis["min"] = fromDate;
     options.xaxis["max"] = toDate;
     const series = [];
     series.push(closePriceData);
+    series.push(openPriceData);
+    series.push(highPriceData);
+    series.push(lowPriceData);
     this.setState(
       {
         series: series,
@@ -204,47 +259,55 @@ class Dashboard extends React.Component {
   };
 
   render() {
+    const { classes } = this.props;
     return (
       <React.Fragment>
         {this.state.loading ? (
-          <Loader />
+          <Loader type="ThreeDots" color="#05386B" height={80} width={80}/>
         ) : (
           this.state.error !== true && (
             <div>
-              <Divider />
-              <Divider />
-              <Divider />
+              
               <ButtonGroup
-                color="primary"
+                className={classes.buttongroup}
+                aria-label="contained primary button group"
+                variant="outlined"
                 style={{
                   display: "flex",
                   justifyContent: "center",
                   margin: "10px",
+                  backgroundColor: "#05386B",
                 }}
               >
-                <Button value="7" onClick={this.selectedPeriod}>
+                <Button value="7" onClick={this.selectedPeriod} style = {{ color : "#5CDB95"}}>
                   7D
                 </Button>
-                <Button value="30" onClick={this.selectedPeriod}>
+                <Button value="30" onClick={this.selectedPeriod} style = {{ color : "#5CDB95"}}>
                   1M
                 </Button>
-                <Button value="90" onClick={this.selectedPeriod}>
+                <Button value="90" onClick={this.selectedPeriod} style = {{ color : "#5CDB95"}}>
                   3M
                 </Button>
-                <Button value="180" onClick={this.selectedPeriod}>
+                <Button value="180" onClick={this.selectedPeriod} style = {{ color : "#5CDB95"}}>
                   6M
                 </Button>
-                <Button value="360" onClick={this.selectedPeriod}>
+                <Button value="360" onClick={this.selectedPeriod} style = {{ color : "#5CDB95"}}>
                   1Y
                 </Button>
-                <Button value="1800" onClick={this.selectedPeriod}>
+                <Button value="1800" onClick={this.selectedPeriod} style = {{ color : "#5CDB95"}}>
                   5Y
                 </Button>
-                <Button value="all" onClick={this.selectedPeriod}>
+                <Button value="all" onClick={this.selectedPeriod} style = {{ color : "#5CDB95"}}>
                   All
                 </Button>
               </ButtonGroup>
-              <Chart options={this.state.options} series={this.state.series} />
+              <div className = {classes.divchart}>
+              <Chart 
+              options={this.state.options} 
+              series={this.state.series}
+              key = "chart"
+              className = {classes.chart} />
+              </div>
             </div>
           )
         )}
@@ -253,4 +316,4 @@ class Dashboard extends React.Component {
   }
 }
 
-export default Dashboard;
+export default withStyles(styles, { withTheme: true })(Dashboard);

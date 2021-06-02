@@ -21,15 +21,17 @@ class SP500 extends React.Component {
     return (
       <React.Fragment>
         <Paper
-          elevation={3}
+          elevation={0}
           style={{
             display: "flex",
             padding: "15px",
             margin: "15px",
             justifyContent: "center",
+            backgroundColor: "#05386B",
+            color : "#5CDB95"
           }}
         >
-          <Typography variant="h4">{"SP 500"}</Typography>
+          <Typography variant="subtitle1">{"SP 500"}</Typography>
         </Paper>
         <Dashboard company="sp500" />
       </React.Fragment>

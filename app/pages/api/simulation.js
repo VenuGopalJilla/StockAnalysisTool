@@ -8,9 +8,9 @@ export default async (req, res, next) => {
     let filepath =
       "F:\\PracticumProject\\stock-analysis-tool-1011\\Data\\simulation\\secid_Next_30_days.csv";
     const companywithidURL =
-      "https://raw.githubusercontent.com/saikr789/stock-analysis-tool-1011/master/Data/SP500Companies.json";
+      "https://raw.githubusercontent.com/saikr789/stock-analysis-tool-1011-data/master/Data/SP500Companies.json";
     let simulationURL =
-      "https://raw.githubusercontent.com/saikr789/stock-analysis-tool-1011/master/Data/Simulation/secid.csv";
+      "https://raw.githubusercontent.com/saikr789/stock-analysis-tool-1011-data/master/Data/Simulation/secid.csv";
     const date = moment(req.query["date"], "YYYY-MM-DD").unix();
     const days = parseInt(req.query["days"]);
     const investment = parseFloat(req.query["investment"]);

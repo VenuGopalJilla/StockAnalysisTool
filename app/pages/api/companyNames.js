@@ -3,7 +3,7 @@ const axios = require("axios");
 export default (req, res) => {
   try {
     const companywithidURL =
-      "https://raw.githubusercontent.com/saikr789/stock-analysis-tool-1011/master/Data/companywithid.json";
+      "https://raw.githubusercontent.com/saikr789/stock-analysis-tool-1011-data/master/Data/companywithid.json";
     axios
       .get(companywithidURL)
       .then((s) => {

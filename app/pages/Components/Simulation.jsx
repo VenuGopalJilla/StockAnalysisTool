@@ -1,28 +1,19 @@
 import React from "react";
-import Autocomplete from "@material-ui/lab/Autocomplete";
 import {
-  Button,
-  Chip,
   Grid,
-  Typography,
-  TextField,
   FormControl,
   InputLabel,
   Select,
   MenuItem,
-  Divider,
   Paper,
 } from "@material-ui/core";
-import { makeStyles } from '@material-ui/core/styles';
 import axios from "axios";
-import Loader from "react-loader-spinner";
 import underscore from "underscore";
 import {
-  DataGrid,
   GridToolbarContainer,
   GridToolbarExport,
 } from "@material-ui/data-grid";
-import DownloadLink from "react-download-link";
+
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
@@ -121,8 +112,6 @@ class Simulation extends React.Component {
 
   onSelectDays = (e) => {
     const days = e.target.value;
-    // const topurl =
-    //   "https://raw.githubusercontent.com/saikr789/stock-analysis-tool-1011/master/Data/Simulation/top_seldays.csv";
     this.setState({ seldays: days }, () => {});
     axios
       .get("/api/simulationtop" + "?" + "days=" + days)
@@ -165,51 +154,40 @@ class Simulation extends React.Component {
       <React.Fragment>
         <Grid>
           <FormControl style={{ minWidth: "150px" }} variant="outlined">
-            <InputLabel>days</InputLabel>
+            <InputLabel style = {{ color : "#5CDB95"}}>days</InputLabel>
             <Select
-              style={{ width: "100%" }}
+              style={{ 
+                width: "100%",
+                backgroundColor: "#05386B",
+                color: "#5CDB95"
+               }}
               labelId="days"
               id="days"
               onChange={this.onSelectDays}
               value={this.state.seldays}
             >
-              {[30, 60, 90, 180, 270, 360, 540, 720, 900, 1080].map(
+              {[30, 60, 90, 180, 360, 720].map(
                 (period) => {
                   return <MenuItem value={period}>{period}</MenuItem>;
                 }
               )}
             </Select>
           </FormControl>
+          <div style = {{
+            padding : '20px',
+          }}></div>
           {this.state.simulationtop.length === 0 ? (
             <span />
           ) : (
-            // <Grid style={{ height: "250px", overflowX: "scroll" }}>
-            //   {/* <Typography variant="h4"> Companies to invest</Typography> */}
-            //   {this.state.simulationtop.map((row) => {
-            //     const company = row['company'];
-            //     return (
-            //       <React.Fragment>
-            //           <Typography variant="h6">{row['company']} {row['average_return_percent']}   
-                     
-            //             <DownloadLink
-            //             label = "Download Simulation Results"
-            //             filename = "details.csv"
-            //             tagName = "button"
-            //             exportFile = {() => Promise.resolve(this. getDataFromURL("https://raw.githubusercontent.com/saikr789/stock-index-risk/master/Data/Simulation/500002.csv"))}
-            //             />
-            //          </Typography>
-            //     </React.Fragment>);
-            //   })}
-            // </Grid>
-            
             <TableContainer component={Paper}>
               <Table className="Simualtion Results" minWidth= "650" aria-label="simple table">
-                <TableHead>
+                <TableHead style = {{ color : "#05386B", backgroundColor: "#5CDB95",}}>
                   <TableRow>
-                    <TableCell variant = "h5"> Company</TableCell>
-                    <TableCell align="right" variant = "h5">Security Id</TableCell>
-                    <TableCell align="right" variant = "h5">Average Returns</TableCell>
-                    <TableCell align="right" variant = "h5">Simulation Results</TableCell>
+                    <TableCell variant = "h5"> Security Id</TableCell>
+                    <TableCell align="right" variant = "h5">Company</TableCell>
+                    <TableCell align="right" variant = "h5">Actual Average Returns</TableCell>
+                    <TableCell align="right" variant = "h5">Minimum Prediction Range</TableCell>
+                    <TableCell align="right" variant = "h5">Maximum Prediction Range</TableCell>
                   </TableRow>
                 </TableHead>
                 <TableBody>
@@ -218,11 +196,13 @@ class Simulation extends React.Component {
                     return (
                     <TableRow key={row.Company}>
                       <TableCell component="th" scope="row">
-                        {row.company}
+                        {row.security_id}
                       </TableCell>
-                      <TableCell align="right">{row.security_id}</TableCell>
-                      <TableCell align="right">{row.average_return_percent}</TableCell>
-                      <TableCell align="right">
+                      <TableCell align="right">{row.company}</TableCell>
+                      <TableCell align="right">{row.actual_average_return_percent}</TableCell>
+                      <TableCell align="right">{row.minimum_prediction_range}</TableCell>
+                      <TableCell align="right">{row.maximum_prediction_range}</TableCell>
+                      {/* <TableCell align="right">
                       <DownloadLink
                         label = "Results"
                         filename = {row["security_id"] + "_" + this.state.seldays + ".csv"}
@@ -230,7 +210,7 @@ class Simulation extends React.Component {
                         // exportFile = {() =>  Promise.resolve(this. getDataFromURL("https://raw.githubusercontent.com/VenuGopalJilla/StockAnalysisTool/main/Data/SP500_simulation_results/" + row["security_id"] + "_" + this.state.seldays + "days.csv"))}
                         exportFile = {() =>  Promise.resolve(this. getDataFromURL("https://raw.githubusercontent.com/saikr789/stock-index-risk/master/Data/SimulationResult/" + row["security_id"] + "_" + this.state.seldays + ".csv"))}
                           />
-                      </TableCell>
+                      </TableCell> */}
                     </TableRow>
                   )})}
                 </TableBody>
@@ -238,111 +218,6 @@ class Simulation extends React.Component {
             </TableContainer>
           )}
         </Grid>
-
-        {/* <Grid container spacing={2} style={{ marginTop: "5px" }}>
-          <Grid item>
-            <Autocomplete
-              style={{ width: "200px" }}
-              value={this.state.selectedCompany}
-              onChange={(e, val) => {
-                if (val == null) {
-                  this.setState(
-                    { response: [], selectedCompany: "" },
-                    () => {}
-                  );
-                } else {
-                  this.setState({ selectedCompany: val }, () => {});
-                }
-              }}
-              id="search for companies"
-              freeSolo
-              options={this.state.companyNames.map(
-                (companyname) => companyname
-              )}
-              renderInput={(params) => (
-                <TextField
-                  {...params}
-                  label="search for companies"
-                  margin="normal"
-                  variant="outlined"
-                />
-              )}
-            />
-          </Grid>
-          <Grid item>
-            <TextField
-              style={{ paddingTop: "15px" }}
-              variant="outlined"
-              id="date"
-              label="start date"
-              type="date"
-              defaultValue="2017-03-10"
-              value={this.state.startdate}
-              onChange={(e) => {
-                this.setState({ startdate: e.target.value });
-              }}
-              InputProps={{
-                inputProps: { min: "2017-03-10", max: "2021-03-19" },
-              }}
-              InputLabelProps={{
-                shrink: true,
-              }}
-            />
-          </Grid>
-          <Grid item>
-            <TextField
-              type="number"
-              style={{ width: "100%", paddingTop: "15px" }}
-              inputProps={{ min: "1", max: "800", step: "1" }}
-              label="days"
-              variant="outlined"
-              value={this.state.days}
-              onChange={(e) => {
-                this.setState({ days: e.target.value });
-              }}
-            />
-          </Grid>
-          <Grid item>
-            <TextField
-              type="number"
-              style={{ width: "100%", paddingTop: "15px" }}
-              inputProps={{ min: "1", max: "1000000", step: "1" }}
-              label="investment"
-              variant="outlined"
-              value={this.state.investment}
-              onChange={(e) => {
-                this.setState({ investment: e.target.value });
-              }}
-            />
-          </Grid>
-          <Grid item>
-            <Button
-              style={{ width: "100%", marginTop: "15px" }}
-              variant="outlined"
-              size="large"
-              onClick={this.onClickSubmit}
-            >
-              Submit
-            </Button>
-          </Grid>
-        </Grid> */}
-        {/* {this.state.loading ? (
-          <Loader />
-        ) : (
-          this.state.companydetailsaftersimulation.length !== 0 && (
-            <DataGrid
-              rows={this.state.companydetailsaftersimulation}
-              columns={this.state.cols}
-              autoHeight
-              disableSelectionOnClick
-              hideFooterPagination
-              hideFooter
-              components={{
-                Toolbar: this.exportToCSV,
-              }}
-            />
-          )
-        )} */}
       </React.Fragment>
     );
   }

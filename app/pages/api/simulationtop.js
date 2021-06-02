@@ -4,10 +4,13 @@ export default async (req, res, next) => {
     console.log("simulationtop");
     // const topurl =
     //   "https://raw.githubusercontent.com/saikr789/stock-analysis-tool-1011/master/Data/Simulation/top_seldays.csv";
-    const topurl =
-      "https://raw.githubusercontent.com/saikr789/stock-index-risk/master/Data/SimulationResult/top_seldays.csv";
+    // const topurl =
+      // "https://raw.githubusercontent.com/saikr789/stock-index-risk/master/Data/SimulationResult/top_seldays.csv";
     // const topurl =
       // "https://raw.githubusercontent.com/VenuGopalJilla/StockAnalysisTool/main/Data/SP500_simulation_results/top_seldays_Results.csv";
+    const topurl = 
+      "https://raw.githubusercontent.com/saikr789/stock-analysis-tool-1011-data/master/Data/Top/buy_seldays.csv";
+
     const days = req.query["days"];
     axios
       .get(topurl.replace("seldays", days))
@@ -23,9 +26,11 @@ export default async (req, res, next) => {
               continue;
             }
             response.push({
-              company: data[0],
-              security_id: data[1],
-              average_return_percent: data[2],
+              security_id: data[0],
+              company : data[1],
+              actual_average_return_percent: data[2],
+              minimum_prediction_range : data[3],
+              maximum_prediction_range : data[4],
             });
           }
           res.send(response);

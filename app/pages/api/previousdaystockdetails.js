@@ -4,9 +4,9 @@ const axios = require("axios");
 export default async (req, res, next) => {
   try {
     const companywithidURL =
-      "https://raw.githubusercontent.com/saikr789/stock-analysis-tool-1011/master/Data/companywithid.json";
+      "https://raw.githubusercontent.com/saikr789/stock-analysis-tool-1011-data/master/Data/companywithid.json";
     const previousdaystockdetailsURL =
-      "https://raw.githubusercontent.com/saikr789/stock-analysis-tool-1011/master/Data/Stock/previousdaystockdetails.csv";
+      "https://raw.githubusercontent.com/saikr789/stock-analysis-tool-1011-data/master/Data/Stock/previousdaystockdetails.csv";
     let company = req.query["company"];
     if (company === undefined) {
       axios

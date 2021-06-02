@@ -8,6 +8,8 @@ import {
 import Typography from "@material-ui/core/Typography";
 import React from "react";
 import { NavLink } from "react-router-dom";
+
+
 const styles = (theme) => ({
   root: {
     width: "100%",
@@ -21,12 +23,28 @@ const styles = (theme) => ({
   },
   paper: {
     display: "flex",
+    
     "& > *": {
-      padding: theme.spacing(2),
-      // margin: theme.spacing(1),
+      padding: theme.spacing(3.6),
+      border: '0px',
       width: "100%",
       height: "100%",
     },
+    backgroundColor: "#05386B",
+    color: "#5CDB95"
+  },
+  paper1: {
+    display: "flex",
+    
+    "& > *": {
+      padding: theme.spacing(1),
+      // margin: theme.spacing(1),
+      border: '0px',
+      width: "100%",
+      height: "100%",
+    },
+    backgroundColor: "#5CDB95",
+    color: "#05386B"
   },
 });
 
@@ -43,18 +61,24 @@ class SideBar extends React.Component {
     const { classes } = this.props;
     return (
       <React.Fragment>
-        <Paper className={classes.paper} elevation={0}>
-          <Accordion style={{ border: "none" }}>
-            <AccordionSummary aria-controls="panel1a-content" id="top10">
-              <Typography variant="h4">TOP 10</Typography>
+        <Paper className={classes.paper} elevation={0} style = {{
+          padding : '0px',
+        }}>
+          <Accordion style = {{
+              backgroundColor: "#05386B",
+              color: "#5CDB95",
+              border : "none"
+            }}>
+            <AccordionSummary id="top10" >
+              <Typography variant="subtitle1">TOP 10</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <NavLink
                 to={{ pathname: "/top/10/buy" }}
                 className={classes.link}
               >
-                <Paper className={classes.paper} elevation={0}>
-                  <Typography variant="h6">BUY</Typography>
+                <Paper className={classes.paper1} elevation={0}>
+                  <Typography variant="subtitle2">BUY</Typography>
                 </Paper>
               </NavLink>
             </AccordionDetails>
@@ -63,25 +87,29 @@ class SideBar extends React.Component {
                 to={{ pathname: "/top/10/sell" }}
                 className={classes.link}
               >
-                <Paper className={classes.paper} elevation={0}>
-                  <Typography variant="h6">SELL</Typography>
+                <Paper className={classes.paper1} elevation={0}>
+                  <Typography variant="subtitle2">SELL</Typography>
                 </Paper>
               </NavLink>
             </AccordionDetails>
           </Accordion>
         </Paper>
         <Paper className={classes.paper} elevation={0}>
-          <Accordion>
-            <AccordionSummary aria-controls="panel1a-content">
-              <Typography variant="h4">TOP 30</Typography>
+          <Accordion style = {{
+              backgroundColor: "#05386B",
+              color: "#5CDB95",
+              border : "none"
+            }}>
+            <AccordionSummary>
+              <Typography variant="subtitle1">TOP 30</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <NavLink
                 to={{ pathname: "/top/30/buy" }}
                 className={classes.link}
               >
-                <Paper className={classes.paper} elevation={0}>
-                  <Typography variant="h6">BUY</Typography>
+                <Paper className={classes.paper1} elevation={0}>
+                  <Typography variant="subtitle2">BUY</Typography>
                 </Paper>
               </NavLink>
             </AccordionDetails>
@@ -90,31 +118,34 @@ class SideBar extends React.Component {
                 to={{ pathname: "/top/30/sell" }}
                 className={classes.link}
               >
-                <Paper className={classes.paper} elevation={0}>
-                  <Typography variant="h6">SELL</Typography>
+                <Paper className={classes.paper1} elevation={0}>
+                  <Typography variant="subtitle2">SELL</Typography>
                 </Paper>
               </NavLink>
             </AccordionDetails>
           </Accordion>
         </Paper>
+        {/* <div style = {{
+            padding : '2px',
+          }}></div> */}
         <Paper className={classes.paper} elevation={0}>
           <NavLink to={{ pathname: "/sectors" }} className={classes.link}>
             <Paper className={classes.paper} elevation={0}>
-              <Typography variant="h4">Sectors</Typography>
+              <Typography variant="subtitle1">SECTORS</Typography>
             </Paper>
           </NavLink>
         </Paper>
         <Paper className={classes.paper} elevation={0}>
           <NavLink to={{ pathname: "/sp500" }} className={classes.link}>
             <Paper className={classes.paper} elevation={0}>
-              <Typography variant="h4">S AND P 500</Typography>
+              <Typography variant="subtitle1">S AND P 500</Typography>
             </Paper>
           </NavLink>
         </Paper>
         <Paper className={classes.paper} elevation={0}>
           <NavLink to={{ pathname: "/revenue" }} className={classes.link}>
             <Paper className={classes.paper} elevation={0}>
-              <Typography variant="h4">TOP REVENUE</Typography>
+              <Typography variant="subtitle1"> TOP REVENUE</Typography>
             </Paper>
           </NavLink>
         </Paper>
