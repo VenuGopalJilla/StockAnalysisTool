@@ -29,8 +29,8 @@ export default async (req, res, next) => {
               security_id: data[0],
               company : data[1],
               actual_average_return_percent: data[2],
-              minimum_prediction_range : data[3],
-              maximum_prediction_range : data[4],
+              minimum_prediction_range : data[4],
+              maximum_prediction_range : data[5],
             });
           }
           res.send(response);
