@@ -6,6 +6,7 @@ import {
   Select,
   MenuItem,
   Paper,
+  Typography,
 } from "@material-ui/core";
 import axios from "axios";
 import underscore from "underscore";
@@ -13,6 +14,8 @@ import {
   GridToolbarContainer,
   GridToolbarExport,
 } from "@material-ui/data-grid";
+
+
 
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -153,6 +156,11 @@ class Simulation extends React.Component {
     return (
       <React.Fragment>
         <Grid>
+          <Typography variant = "subtitle1" style = {{ color : "#05386B"}}>Select number of days for simulation : </Typography>
+          <div style = {{
+            padding : '3px'
+          }}>
+          </div>
           <FormControl style={{ minWidth: "150px" }} variant="outlined">
             <InputLabel style = {{ color : "#5CDB95"}}>days</InputLabel>
             <Select

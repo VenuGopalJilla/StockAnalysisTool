@@ -139,6 +139,11 @@ class Comparison extends React.Component {
           justify="flex-start"
           alignItems="center"
         >
+          <Typography variant = "subtitle1" style = {{ color : "#05386B"}}>Parameters for Comparison : </Typography>
+          <div style = {{
+            padding : '3px'
+          }}>
+          </div>
           <Grid item xs={4}>
             <Autocomplete
               multiple
