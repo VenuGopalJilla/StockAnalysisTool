@@ -25,7 +25,7 @@ const styles = (theme) => ({
     display: "flex",
     
     "& > *": {
-      padding: theme.spacing(3.6),
+      padding: theme.spacing(3),
       border: '0px',
       width: "100%",
       height: "100%",

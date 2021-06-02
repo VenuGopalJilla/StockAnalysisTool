@@ -19,6 +19,7 @@ import SideBar from "./SideBar";
 import SP500 from "./SP500";
 import Top from "./Top";
 import Simulation from "./Simulation";
+import Main from "./Main";
 
 const drawerWidth = 300;
 const styles = (theme) => ({
@@ -102,7 +103,8 @@ class Home extends React.Component {
           </Drawer>
           <main className={classes.content}>
             <Switch>
-              <Route exact path="/" />
+              <Route exact path="/" component = {Main}/>
+              <Route exact path="/home" component = {Main}/>
               {/* <Route exact path="/login" component={Login} /> */}
               <Route exact path="/about" component={About} />
               {/* <Route exact path="/performance" component={Performance} /> */}
